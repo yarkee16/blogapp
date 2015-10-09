@@ -1,0 +1,24 @@
+<ion-view view-title="Creando Post">
+  <ion-content class="padding">
+    <form name="createPost" role="form" ng-submit="create()">
+    <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Autor</span>
+    <input type="text" placeholder="Nombre de autor">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Titulo</span>
+    <input type="text" placeholder="Titulo del post" ng-model="postcreate.post.title">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Contenido</span>
+    <textarea placeholder="Contenido del post" rows="4" cols="50" ng-model="postcreate.post.text">
+    </textarea>
+  </label>
+</div>
+</form>
+<button class="button button-block ion-paper-airplane button-positive" type="submit" ng-disabled="!createPost.$valid" ng-click="showAlert()">
+  Publicar
+</button>
+  </ion-content>
+</ion-view>
